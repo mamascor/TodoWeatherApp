@@ -11,7 +11,8 @@ import SwiftUI
 struct TodoWeatherAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppTabView()
+                .environment(\.colorScheme, .dark)
         }
     }
 }

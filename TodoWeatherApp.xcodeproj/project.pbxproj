@@ -11,6 +11,8 @@
 		CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2E72946BD8D00B49D6E /* ContentView.swift */; };
 		CE6CC2EA2946BD8F00B49D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */; };
 		CE6CC2EE2946BD8F00B49D6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC2ED2946BD8F00B49D6E /* Preview Assets.xcassets */; };
+		CE6CC2F92946BFC400B49D6E /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2F82946BFC400B49D6E /* AppTabView.swift */; };
+		CE6CC2FD2946C22E00B49D6E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2FC2946C22E00B49D6E /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6CC2EB2946BD8F00B49D6E /* TodoWeatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoWeatherApp.entitlements; sourceTree = "<group>"; };
 		CE6CC2ED2946BD8F00B49D6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE6CC2F82946BFC400B49D6E /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		CE6CC2FC2946C22E00B49D6E /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */,
-				CE6CC2E72946BD8D00B49D6E /* ContentView.swift */,
+				CE6CC2FB2946C21B00B49D6E /* Components */,
+				CE6CC2FA2946C21100B49D6E /* Views */,
 				CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */,
 				CE6CC2EB2946BD8F00B49D6E /* TodoWeatherApp.entitlements */,
 				CE6CC2EC2946BD8F00B49D6E /* Preview Content */,
@@ -67,6 +72,23 @@
 				CE6CC2ED2946BD8F00B49D6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE6CC2FA2946C21100B49D6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CC2F82946BFC400B49D6E /* AppTabView.swift */,
+				CE6CC2E72946BD8D00B49D6E /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE6CC2FB2946C21B00B49D6E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CC2FC2946C22E00B49D6E /* WeatherView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */,
+				CE6CC2F92946BFC400B49D6E /* AppTabView.swift in Sources */,
 				CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */,
+				CE6CC2FD2946C22E00B49D6E /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
