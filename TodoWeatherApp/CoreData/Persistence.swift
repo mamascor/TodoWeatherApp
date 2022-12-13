@@ -27,6 +27,8 @@ struct PersistenceController {
         }
         return result
     }()
+    
+    //Initializing the persistence container
 
     let container: NSPersistentContainer
 
