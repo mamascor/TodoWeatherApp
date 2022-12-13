@@ -33,8 +33,6 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        let status = locationManager.authorizationStatus
-
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
