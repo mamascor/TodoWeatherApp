@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct TodoWeatherAppApp: App {
+    
+    let persistenceController = PersistenceController.shared
+    @EnvironmentObject var locationmanager: LocationManager
+    
     var body: some Scene {
         WindowGroup {
             AppTabView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environment(\.colorScheme, .dark)
         }
     }

@@ -12,6 +12,8 @@ import MapKit
 final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     
+    
+    
     @Published var location: CLLocationCoordinate2D?
 
     override init() {
@@ -19,11 +21,28 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         locationManager.delegate = self
     }
 
-    func requestLocation() {
+    func requestLocation() -> Bool  {
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        let status = locationManager.authorizationStatus
         
+        switch status {
+        case .notDetermined:
+            return false
+        case .restricted:
+            return false
+        case .denied:
+            return false
+        case .authorizedAlways:
+            return true
+        case .authorizedWhenInUse:
+            return true
+        case .authorized:
+            return true
+        @unknown default:
+            fatalError("DEBUG: Could not determine")
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -35,6 +54,6 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         //Handle any errors here...
-        print (error.localizedDescription)
+        print ("DEBUG 2: ",error.localizedDescription)
     }
 }

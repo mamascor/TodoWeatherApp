@@ -11,6 +11,11 @@
 		CE6355C92947E13B00C0912F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355C82947E13B00C0912F /* LocationManager.swift */; };
 		CE6355CC2947E7A400C0912F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CB2947E7A400C0912F /* WeatherModel.swift */; };
 		CE6355CE2947E7D800C0912F /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */; };
+		CE6355D12947F8BE00C0912F /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CF2947F8BE00C0912F /* Todo.xcdatamodeld */; };
+		CE6355D42947F98500C0912F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355D32947F98500C0912F /* Persistence.swift */; };
+		CE6355D62947F9EC00C0912F /* DynamicFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355D52947F9EC00C0912F /* DynamicFilterView.swift */; };
+		CE6355D82947FBAF00C0912F /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355D72947FBAF00C0912F /* TaskViewModel.swift */; };
+		CE6355DA2948029E00C0912F /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355D92948029E00C0912F /* NewTaskView.swift */; };
 		CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */; };
 		CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2E72946BD8D00B49D6E /* ContentView.swift */; };
 		CE6CC2EA2946BD8F00B49D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */; };
@@ -24,6 +29,11 @@
 		CE6355C82947E13B00C0912F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE6355CB2947E7A400C0912F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		CE6355D02947F8BE00C0912F /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
+		CE6355D32947F98500C0912F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CE6355D52947F9EC00C0912F /* DynamicFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilterView.swift; sourceTree = "<group>"; };
+		CE6355D72947FBAF00C0912F /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		CE6355D92948029E00C0912F /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		CE6CC2E22946BD8D00B49D6E /* TodoWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWeatherAppApp.swift; sourceTree = "<group>"; };
 		CE6CC2E72946BD8D00B49D6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,8 +69,17 @@
 			children = (
 				CE6355CB2947E7A400C0912F /* WeatherModel.swift */,
 				CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */,
+				CE6355D72947FBAF00C0912F /* TaskViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE6355D22947F97300C0912F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE6355D32947F98500C0912F /* Persistence.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		CE6CC2D92946BD8D00B49D6E = {
@@ -83,12 +102,14 @@
 			isa = PBXGroup;
 			children = (
 				CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */,
+				CE6355D22947F97300C0912F /* CoreData */,
 				CE6355CA2947E79A00C0912F /* Model */,
 				CE6355C72947E03D00C0912F /* Managers */,
 				CE6CC2FB2946C21B00B49D6E /* Components */,
 				CE6CC2FA2946C21100B49D6E /* Views */,
 				CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */,
 				CE6CC2EB2946BD8F00B49D6E /* TodoWeatherApp.entitlements */,
+				CE6355CF2947F8BE00C0912F /* Todo.xcdatamodeld */,
 				CE6CC2EC2946BD8F00B49D6E /* Preview Content */,
 			);
 			path = TodoWeatherApp;
@@ -106,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6CC2F82946BFC400B49D6E /* AppTabView.swift */,
+				CE6355D92948029E00C0912F /* NewTaskView.swift */,
 				CE6CC2E72946BD8D00B49D6E /* ContentView.swift */,
 			);
 			path = Views;
@@ -115,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6CC2FC2946C22E00B49D6E /* WeatherView.swift */,
+				CE6355D52947F9EC00C0912F /* DynamicFilterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,13 +213,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */,
+				CE6355D82947FBAF00C0912F /* TaskViewModel.swift in Sources */,
 				CE6CC2F92946BFC400B49D6E /* AppTabView.swift in Sources */,
+				CE6355D62947F9EC00C0912F /* DynamicFilterView.swift in Sources */,
 				CE6355C92947E13B00C0912F /* LocationManager.swift in Sources */,
 				CE6355CC2947E7A400C0912F /* WeatherModel.swift in Sources */,
+				CE6355D12947F8BE00C0912F /* Todo.xcdatamodeld in Sources */,
 				CE6355CE2947E7D800C0912F /* WeatherDataModel.swift in Sources */,
+				CE6355DA2948029E00C0912F /* NewTaskView.swift in Sources */,
 				CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */,
 				CE6CC2FD2946C22E00B49D6E /* WeatherView.swift in Sources */,
 				CE6355C62947E03B00C0912F /* WeatherManager.swift in Sources */,
+				CE6355D42947F98500C0912F /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +353,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Data Task";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location required to update weather information.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location required to update weather information.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -335,9 +364,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -345,10 +373,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boringlemonade.TodoWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -365,6 +395,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Data Task";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location required to update weather information.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location required to update weather information.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -375,9 +406,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -385,10 +415,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boringlemonade.TodoWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -414,6 +446,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE6355CF2947F8BE00C0912F /* Todo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE6355D02947F8BE00C0912F /* Todo.xcdatamodel */,
+			);
+			currentVersion = CE6355D02947F8BE00C0912F /* Todo.xcdatamodel */;
+			path = Todo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE6CC2DA2946BD8D00B49D6E /* Project object */;
 }

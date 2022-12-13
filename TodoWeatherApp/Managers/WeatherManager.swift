@@ -12,6 +12,8 @@ import CoreLocation
 
 final class WeatherManager: NSObject, ObservableObject {
     
+    static let shared = WeatherManager()
+    
     @Published var model: WeatherModel?
     
     let url = "https://api.openweathermap.org/data/2.5/weather?appid=31b928bbacb19b6fa37259041d320a32&units=imperial"
@@ -33,7 +35,7 @@ final class WeatherManager: NSObject, ObservableObject {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlString) { data, response, error in
             if let error = error {
-                print(error.localizedDescription)
+                print("DEBUG 1",error.localizedDescription)
             }
             
             guard let fetchedData = data else { return }
