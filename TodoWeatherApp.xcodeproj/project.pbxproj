@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6355C62947E03B00C0912F /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355C52947E03B00C0912F /* WeatherManager.swift */; };
+		CE6355C92947E13B00C0912F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355C82947E13B00C0912F /* LocationManager.swift */; };
+		CE6355CC2947E7A400C0912F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CB2947E7A400C0912F /* WeatherModel.swift */; };
+		CE6355CE2947E7D800C0912F /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */; };
 		CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */; };
 		CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CC2E72946BD8D00B49D6E /* ContentView.swift */; };
 		CE6CC2EA2946BD8F00B49D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE6355C52947E03B00C0912F /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		CE6355C82947E13B00C0912F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CE6355CB2947E7A400C0912F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		CE6CC2E22946BD8D00B49D6E /* TodoWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWeatherAppApp.swift; sourceTree = "<group>"; };
 		CE6CC2E72946BD8D00B49D6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6355C72947E03D00C0912F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CE6355C52947E03B00C0912F /* WeatherManager.swift */,
+				CE6355C82947E13B00C0912F /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CE6355CA2947E79A00C0912F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE6355CB2947E7A400C0912F /* WeatherModel.swift */,
+				CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CE6CC2D92946BD8D00B49D6E = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6CC2E52946BD8D00B49D6E /* TodoWeatherAppApp.swift */,
+				CE6355CA2947E79A00C0912F /* Model */,
+				CE6355C72947E03D00C0912F /* Managers */,
 				CE6CC2FB2946C21B00B49D6E /* Components */,
 				CE6CC2FA2946C21100B49D6E /* Views */,
 				CE6CC2E92946BD8F00B49D6E /* Assets.xcassets */,
@@ -163,8 +191,12 @@
 			files = (
 				CE6CC2E82946BD8D00B49D6E /* ContentView.swift in Sources */,
 				CE6CC2F92946BFC400B49D6E /* AppTabView.swift in Sources */,
+				CE6355C92947E13B00C0912F /* LocationManager.swift in Sources */,
+				CE6355CC2947E7A400C0912F /* WeatherModel.swift in Sources */,
+				CE6355CE2947E7D800C0912F /* WeatherDataModel.swift in Sources */,
 				CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */,
 				CE6CC2FD2946C22E00B49D6E /* WeatherView.swift in Sources */,
+				CE6355C62947E03B00C0912F /* WeatherManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +325,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location required to update weather information.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location required to update weather information.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -331,6 +365,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location required to update weather information.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location required to update weather information.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

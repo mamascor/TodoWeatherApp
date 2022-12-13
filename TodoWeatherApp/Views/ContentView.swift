@@ -8,15 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var locationmanager = LocationManager()
+    @StateObject private var weathermanager = WeatherManager()
+    
     var body: some View {
         ZStack {
             Color("grey").ignoresSafeArea()
             VStack {
-                WeatherView()
-                
+                if let model = weathermanager.model {
+                    WeatherView(model: model)
+                }
                 Spacer()
                
             }
+           
+        }
+        .onAppear{
+            locationmanager.requestLocation()
+            DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    withAnimation(.linear) {
+                        getWeatherData()
+                    }
+                   
+                   print("Weather")
+                }
+               
+            }
+            
+           
+           
            
         }
         .navigationTitle("To Do")
@@ -28,6 +49,15 @@ struct ContentView: View {
         }
         
        
+    }
+    
+    func getWeatherData(){
+        if let location = locationmanager.location {
+            withAnimation {
+                weathermanager.fetchWeather(location)
+            }
+           
+        }
     }
 }
 

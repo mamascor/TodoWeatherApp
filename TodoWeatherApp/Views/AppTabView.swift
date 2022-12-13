@@ -17,30 +17,6 @@ struct AppTabView: View {
                    
             }
             .foregroundColor(.white)
-            .tabItem {
-                Image("home")
-                    .foregroundColor(.white)
-                Text("Home")
-            }
-            
-            ContentView()
-                .tabItem {
-                    Image("sun")
-                    Text("Weather")
-                        .foregroundColor(.white)
-                }
-            ContentView()
-                .tabItem {
-                    Image("sun")
-                    Text("Weather")
-                        .foregroundColor(.white)
-                }
-            ContentView()
-                .tabItem {
-                    Image("sun")
-                    Text("Weather")
-                        .foregroundColor(.white)
-                }
         }
         .accentColor(.white)
     }
