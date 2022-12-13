@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var locationmanager = LocationManager()
-    @StateObject private var weathermanager = WeatherManager.shared
     @StateObject var taskModel: TaskViewModel = TaskViewModel()
     
     @Namespace var animation
@@ -17,16 +16,18 @@ struct ContentView: View {
         ZStack {
             Color("grey").ignoresSafeArea()
             VStack {
-                if let model = weathermanager.model {
-                    VStack(alignment:.leading) {
+
+                if let locationmanager = locationmanager.model {
+                    VStack(alignment: .leading){
                         Text("Todays weather")
                             .font(.caption)
                             .fontWeight(.thin)
-                        WeatherView(model: model)
+                        
+                        WeatherView(model: locationmanager)
                     }
-                    .padding(.horizontal)
-                    
                 }
+                    
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 28) {
                         ForEach(taskModel.currentWeek, id: \.self){ day in
@@ -77,16 +78,7 @@ struct ContentView: View {
                 .environmentObject(taskModel)
         })
         .onAppear{
-            if locationmanager.requestLocation() {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                    withAnimation(.linear) {
-                        getWeatherData()
-                    }
-                    
-                    print("Weather")
-                }
-            }
-            
+            locationmanager.requestLocation()
         }
         .navigationTitle("To Do")
         .navigationBarTitleDisplayMode(.inline)
@@ -104,14 +96,7 @@ struct ContentView: View {
         
     }
     
-    func getWeatherData(){
-        if let location = locationmanager.location {
-            withAnimation {
-                weathermanager.fetchWeather(location)
-            }
-            
-        }
-    }
+
     
     @ViewBuilder
     func TaskView() -> some View {

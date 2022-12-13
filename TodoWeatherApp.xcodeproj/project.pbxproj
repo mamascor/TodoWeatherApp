@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE6355C62947E03B00C0912F /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355C52947E03B00C0912F /* WeatherManager.swift */; };
 		CE6355C92947E13B00C0912F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355C82947E13B00C0912F /* LocationManager.swift */; };
 		CE6355CC2947E7A400C0912F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CB2947E7A400C0912F /* WeatherModel.swift */; };
 		CE6355CE2947E7D800C0912F /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE6355C52947E03B00C0912F /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		CE6355C82947E13B00C0912F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE6355CB2947E7A400C0912F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		CE6355CD2947E7D800C0912F /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 		CE6355C72947E03D00C0912F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				CE6355C52947E03B00C0912F /* WeatherManager.swift */,
 				CE6355C82947E13B00C0912F /* LocationManager.swift */,
 			);
 			path = Managers;
@@ -223,7 +220,6 @@
 				CE6355DA2948029E00C0912F /* NewTaskView.swift in Sources */,
 				CE6CC2E62946BD8D00B49D6E /* TodoWeatherAppApp.swift in Sources */,
 				CE6CC2FD2946C22E00B49D6E /* WeatherView.swift in Sources */,
-				CE6355C62947E03B00C0912F /* WeatherManager.swift in Sources */,
 				CE6355D42947F98500C0912F /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
