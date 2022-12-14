@@ -17,7 +17,6 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     @Published var location: CLLocationCoordinate2D? {
         didSet {
             guard let location = location else { fatalError("❌ DEBUG: Location couldnt load") }
-            
             fetchWeather(location)
         }
     }
@@ -30,8 +29,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     func requestLocation() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
+        
+//this request the location to always        locationManager.requestAlwaysAuthorization()
+ //this request the location yo when in use       locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
 
@@ -58,12 +58,13 @@ extension LocationManager {
     func fetchWeather(_ coordinate: CLLocationCoordinate2D) {
         let url = "\(url)&lat=\(coordinate.latitude)&lon=\(coordinate.longitude)"
         
-        print("❌ DEBUG: Fetched URL: \(url)")
+        print("📍DEBUG: Fetched URL: \(url)")
         
         performRequest(with: url)
     }
     
     func performRequest(with url: String){
+        //this makes sure the URL is not empty
         guard let urlString = URL(string: url) else { return }
         
         let session = URLSession(configuration: .default)
