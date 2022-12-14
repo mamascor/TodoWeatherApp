@@ -30,7 +30,8 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     func requestLocation() {
         
-//this request the location to always        locationManager.requestAlwaysAuthorization()
+//this request the location to always 
+       locationManager.requestAlwaysAuthorization()
  //this request the location yo when in use       locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
