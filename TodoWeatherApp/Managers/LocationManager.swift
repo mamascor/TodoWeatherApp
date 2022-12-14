@@ -100,7 +100,7 @@ extension LocationManager {
             let temp = decodedData.main.temp
             let name = decodedData.name
             
-            
+            creating a weather intance into a model
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: description)
             
             print(weather)
