@@ -57,6 +57,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 extension LocationManager {
     
     func fetchWeather(_ coordinate: CLLocationCoordinate2D) {
+        //getting url string, usung latitude and longitude of user
         let url = "\(url)&lat=\(coordinate.latitude)&lon=\(coordinate.longitude)"
         
         print("📍DEBUG: Fetched URL: \(url)")
