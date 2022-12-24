@@ -28,6 +28,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         locationManager.delegate = self
     }
 
+//requesting location
     func requestLocation() {
         
 //this request the location to always 
